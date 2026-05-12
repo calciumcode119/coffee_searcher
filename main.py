@@ -25,7 +25,7 @@ def fetch_coordinates(apikey, address):
 
 
 def get_coffee_shops():
-    with open('coffee.json', 'r') as coffee:
+    with open('coffee.json', 'r', encoding='cp1251') as coffee:
         coffee_j = coffee.read()
     coffee_shops = json.loads(coffee_j)
     return coffee_shops
