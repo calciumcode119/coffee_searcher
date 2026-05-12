@@ -47,22 +47,17 @@ def get_nearest_shops(coffee_shops, current_coords):
     shops_list = []
 
     for shop in coffee_shops:
-        shop_info = {
-        'title': ' ',
-        'distance': 0.0,
-        'latitude': 0.0,
-        'longitude': 0.0,
-        }
-        
         shop_coords = shop['geoData']['coordinates']
         shop_coords_swapped = shop_coords[1], shop_coords[0]
 
         distance_to_shop = distance.distance(current_coords, shop_coords_swapped).km
 
-        shop_info['title'] = shop['Name']
-        shop_info['distance'] = distance_to_shop
-        shop_info['latitude'] = shop_coords[1]
-        shop_info['longitude'] = shop_coords[0]
+        shop_info = {
+        'title': shop['Name'],
+        'distance': distance_to_shop,
+        'latitude': shop_coords[1],
+        'longitude': shop_coords[0],
+        }
 
         shops_list.append(shop_info)
 
