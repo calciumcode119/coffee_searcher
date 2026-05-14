@@ -50,7 +50,10 @@ def get_nearest_shops(coffee_shops, current_coords):
         shop_coords = shop['geoData']['coordinates']
         shop_coords_swapped = shop_coords[1], shop_coords[0]
 
-        distance_to_shop = distance.distance(current_coords, shop_coords_swapped).km
+        distance_to_shop = distance.distance(
+            current_coords,
+            shop_coords_swapped,
+            ).km
 
         shop_info = {
             'title': shop['Name'],
