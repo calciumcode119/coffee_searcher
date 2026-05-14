@@ -88,7 +88,6 @@ def main():
     coffee_shops = get_coffee_shops()
     nearest_shops = get_nearest_shops(coffee_shops, current_coords)
 
-    print('Ваши координаты: ', current_coords)
     create_map(current_coords, nearest_shops)
 
 
