@@ -53,11 +53,11 @@ def get_nearest_shops(coffee_shops, current_coords):
         distance_to_shop = distance.distance(current_coords, shop_coords_swapped).km
 
         shop_info = {
-        'title': shop['Name'],
-        'distance': distance_to_shop,
-        'latitude': shop_coords[1],
-        'longitude': shop_coords[0],
-        }
+            'title': shop['Name'],
+            'distance': distance_to_shop,
+            'latitude': shop_coords[1],
+            'longitude': shop_coords[0],
+            }
 
         shops_list.append(shop_info)
 
