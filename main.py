@@ -60,7 +60,7 @@ def get_nearest_shops(coffee_shops, current_coords):
             'distance': distance_to_shop,
             'latitude': shop_coords[1],
             'longitude': shop_coords[0],
-            }
+        }
 
         shops_list.append(shop_info)
 
